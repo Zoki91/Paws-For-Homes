@@ -4,10 +4,6 @@ const path = require('path')
 const session = require('express-session')
 const routes = require('./controller/index')
 const exphbs = require('express-handlebars')
-require('dotenv').config()
-
-// load passport
-const passport = require('./config/passport')
 
 
 
@@ -35,10 +31,6 @@ const sess = {
 
 // session middleware
 app.use(session(sess))
-
-// set up passport
-app.use(passport.initialize())
-app.use(passport.session())
 
 // set handlebars engine
 app.engine('handlebars', exphbs())
