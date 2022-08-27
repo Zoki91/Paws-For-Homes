@@ -23,7 +23,7 @@ Pet.init({
     },
     breed:{
         type: DataTypes.STRING,
-        allowNull
+        allowNull: false,
     },
     age:{
         type: DataTypes.INTEGER,
@@ -33,24 +33,16 @@ Pet.init({
             min: 0
         }
     },
-    Gender:{
-        type: DataTypes.INTEGER,
+    gender:{
+        type: DataTypes.STRING,
         allowNull: false,
     },
     description:{
-       type: DataTypes.INTEGER,
+       type: DataTypes.TEXT, 
        allowNull: false
     },
     location:{
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    firstName:{
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    phoneNumber:{
-        type: DataTypes.INTERGER,
+        type: DataTypes.STRING,
         allowNull: false
     },
     user_id:{
@@ -60,7 +52,6 @@ Pet.init({
            key:'id'
         }
     }
-
 },
 {
    sequelize,

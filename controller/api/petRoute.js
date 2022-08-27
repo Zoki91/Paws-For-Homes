@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: User,
+                attributes: ['username', 'email', 'phoneNumber']
             },
         ]
     })
@@ -27,13 +28,14 @@ router.get('/', (req, res) => {
 })
 
 
-//GET one pet by input info ---------------------- not completed yet
+//GET one pet by id ---------------------- 
 router.get('/:id', withAuth, (req, res) => {
     Pet.findOne({
         where: { id: req.params.id },
         include: [
             {
                 model: User,
+                attributes: ['username', 'email', 'phoneNumber']
             },
         ]
     })
@@ -53,18 +55,55 @@ router.get('/:id', withAuth, (req, res) => {
 })
 
 
+
+// GET pets by user search input ------------- not completed yet
+router.get('/search', 
+    // withAuth,  // TODO: uncomment this after finish testing
+    (req, res) => {
+        Pet.findAll({
+            where: { 
+                typeOfPet: req.body.typeOfPet,
+                breed: req.body.breed,
+                gender: req.body.gender,
+                location: req.body.location 
+            },
+            include: [
+                {
+                    model: User,
+                    attributes: ['username', 'email', 'phoneNumber']
+                },
+            ]
+        })
+        .then(petData => {
+            // if not found, return message
+            if (!petData) {
+                return res.status(404).json({ message: 'Cannot found any pets!' })
+            }
+            // else, return data
+            res.status(200).json(petData)
+        })
+        // handle err
+        .catch(err => {
+            console.log(err)
+            res.status(500).json(err)
+        })
+})
+
+
+
+
+
+
 // Create a new pet
 router.post('/', withAuth, (req, res) => {
     Pet.create({
-        type: req.body.type,
+        typeOfPet: req.body.typeOfPet,
         name: req.body.name,
         breed: req.body.breed,
         age: req.body.age,
         gender: req.body.gender,
         description: req.body.description,
         location: req.body.location,
-        ownername: req.body.ownername,
-        phone: req.body.phone,
         user_id: req.session.user_id
     })
         // if no err, return data
@@ -83,11 +122,11 @@ router.put('/:id', withAuth, (req, res) => {
         {
             type: req.body.type,
             name: req.body.name,
+            breed: req.body.breed,
             age: req.body.age,
+            gender: req.body.gender,
             description: req.body.description,
             location: req.body.location,
-            ownername: req.body.ownername,
-            phone: req.body.phone,
             user_id: req.session.user_id
         },
         {

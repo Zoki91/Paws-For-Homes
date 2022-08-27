@@ -87,7 +87,7 @@ router.get('/new', (req, res) => {
 })
 
 
-// find a pet link
+// find pets link
 router.get('/find', (req, res) => {
     res.render('find-a-pet')
 })

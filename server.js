@@ -32,8 +32,13 @@ const sess = {
 // session middleware
 app.use(session(sess))
 
+
+
+
+const hbs = exphbs.create()
+
 // set handlebars engine
-app.engine('handlebars', exphbs())
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars')
 
 app.use(express.static(path.join(__dirname, 'public')))
