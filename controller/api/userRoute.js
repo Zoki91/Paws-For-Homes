@@ -49,6 +49,8 @@ router.get('/:id', (req, res) => {
 // Create a new User when sign up
 router.post('/', (req, res) => {
     User.create({
+        username:req.body.username,
+        phoneNumber: req.body.phoneNumber,
         email:req.body.email,
         password: req.body.password
     })
@@ -56,6 +58,8 @@ router.post('/', (req, res) => {
             // user data to session
             req.session.save(() => {
                 req.session.user_id = userData.id
+                req.session.username = userData.username
+                req.session.phoneNumber = userData.phoneNumber
                 req.session.email=userData.email
                 req.session.loggedIn = true
                 res.status(200).json(userData)
@@ -91,6 +95,8 @@ router.post('/login', (req, res) => {
             req.session.save(() => {
                 req.session.user_id = userData.id
                 req.session.email = userData.email
+                req.session.username = userData.username
+                req.session.phoneNumber = userData.phoneNumber
                 req.session.loggedIn = true
                 res.status(200).json({
                     user: userData,

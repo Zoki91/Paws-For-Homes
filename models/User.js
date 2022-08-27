@@ -15,6 +15,16 @@ User.init({
         primaryKey: true,
         autoIncrement: true
     },
+    // TODO: put username & phone Number in the user model
+    // username
+    username:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    phoneNumber:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
     email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -33,7 +43,7 @@ User.init({
 },
 {
    hooks: {
-    onCreation: async (newData) => {
+    beforeCreate: async (newData) => {
         newData.password = await bcrypt.hash(newData.password, 10);
         return newData;
     }

@@ -21,28 +21,6 @@ router.get('/', (req, res) => {
         })
 })
 
-// //GET one pet
-// router.get('/pet/:id', (req, res) => {
-//     Pet.findOne({
-//         where: { id: req.params.id }
-//     })
-//         .then(petData => {
-//             // if not found, return message
-//             if (!petData) {
-//                 return res.status(404).json({ message: 'Cannot found pet by this id!' })
-//             }
-
-//             const pet = petData.get({ plain: true })
-//             res.render('one-pet', {
-//                 pet,
-//                 loggedIn: req.session.loggedIn
-//             })
-//         })
-//         .catch(err => {
-//             console.log(err)
-//             res.status(500).json(err)
-//         }) 
-// })
 
 // login & sign up link
 router.get('/login', (req, res) => {
