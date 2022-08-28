@@ -6,7 +6,7 @@ const petData = [
     {
         typeOfPet: 'Cat',
         name: 'Cat1',
-        breed: 'cat1 breed',
+        breed: '1',
         age: 1,
         gender: 'male',
         description: 'good',
@@ -16,7 +16,7 @@ const petData = [
     {
         typeOfPet: 'Dog',
         name: 'Dog1',
-        breed: 'dog1 breed',
+        breed: '3',
         age: 1,
         gender: 'male',
         description: 'good',
@@ -26,7 +26,7 @@ const petData = [
     {
         typeOfPet: 'Cat2',
         name: 'Cat2',
-        breed: 'cat2 breed',
+        breed: '1',
         age: 1,
         gender: 'male',
         description: 'good',

@@ -10,7 +10,6 @@ router.get('/', withAuth, (req, res) => {
     // all pets
     Pet.findAll({
         where: { user_id: req.session.user_id },
-        order: [['created_at', 'DESC']],
         include: [
             {
                 model: User

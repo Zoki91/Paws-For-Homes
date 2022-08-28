@@ -85,7 +85,7 @@ router.post('/login', (req, res) => {
             }
 
             // Validate password
-            const password = userData.checkPassword(req.body.password)
+            const password = userData.passwordCheck(req.body.password)
 
             // if password not match, show message
             if (!password) {
