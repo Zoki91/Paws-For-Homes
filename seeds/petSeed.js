@@ -5,32 +5,42 @@ const { Pet } = require('../models')
 const petData = [
     {
         typeOfPet: 'Cat',
-        name: 'Cat1',
-        breed: '1',
+        name: 'Tigger',
+        breed: 'Bengal Cat',
         age: 1,
-        gender: 'male',
-        description: 'good',
+        gender: 'Female',
+        description: 'good cat',
         location: 'Melbourne',
         user_id: 1        
     },
     {
         typeOfPet: 'Dog',
-        name: 'Dog1',
-        breed: '3',
-        age: 1,
-        gender: 'male',
-        description: 'good',
+        name: 'Luck',
+        breed: 'Golden Retriever',
+        age: 2,
+        gender: 'Male',
+        description: 'good dog',
         location: 'Melbourne',
         user_id: 1  
     },
     {
-        typeOfPet: 'Cat2',
-        name: 'Cat2',
-        breed: '1',
+        typeOfPet: 'Cat',
+        name: 'Lucky',
+        breed: 'American Shorthair',
         age: 1,
-        gender: 'male',
-        description: 'good',
-        location: 'Melbourne',
+        gender: 'Male',
+        description: 'good cat',
+        location: 'Sydney',
+        user_id: 2  
+    },
+    {
+        typeOfPet: 'Dog',
+        name: 'Benny',
+        breed: 'Spitz',
+        age: 1,
+        gender: 'Male',
+        description: 'good dog',
+        location: 'Sydney',
         user_id: 2  
     },
 ];
