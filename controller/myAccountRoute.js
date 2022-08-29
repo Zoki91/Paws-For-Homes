@@ -6,32 +6,36 @@ const withAuth = require('../utils/auth')
 
 
 // GET info and render My Account page
-router.get('/', withAuth, (req, res) => {
-    // all pets
-    Pet.findAll({
-        where: { user_id: req.session.user_id },
-        include: [
-            {
-                model: User
-            }
-        ]
-    })
-        .then(petData => {
-            const pets = petData.map(pet => pet.get({ plain: true }))
-            res.render('my-account', {
-                pets,
-                loggedIn: true
+router.get('/',
+    // withAuth, // TODO: uncomment this after finish testing
+    (req, res) => {
+        // all pets
+        Pet.findAll({
+            where: { user_id: req.session.user_id },
+            include: [
+                {
+                    model: User
+                }
+            ]
+        })
+            .then(petData => {
+                const pets = petData.map(pet => pet.get({ plain: true }))
+                res.render('my-account', {
+                    pets,
+                    loggedIn: true
+                })
             })
-        })
-        .catch(err => {
-            console.log(err)
-            res.status(500).json(err)
-        })
-})
+            .catch(err => {
+                console.log(err)
+                res.status(500).json(err)
+            })
+    })
 
 
 // When click on update btn, rander edit pet page
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', 
+// withAuth, // TODO: uncomment this after finish testing
+(req, res) => {
     Pet.findByPk(
         req.params.id,
         {
@@ -62,7 +66,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 
 // When click on delete btn, delete pet info by id
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', 
+// withAuth, // TODO: uncomment this after finish testing
+(req, res) => {
     Pet.destroy({
         where: { id: req.params.id }
     })
@@ -82,7 +88,7 @@ router.delete('/:id', withAuth, (req, res) => {
 
 // find a home link
 router.get('/new', (req, res) => {
-    res.render('find-a-home')   
+    res.render('find-a-home')
 })
 
 
