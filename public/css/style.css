@@ -3,7 +3,7 @@ form h2{
   font-weight: 900;
   margin-bottom: 40px;
 }
-form{
+form {
   width: 360px;
   margin: 0 auto;
   padding: 30px;
@@ -11,6 +11,16 @@ form{
   border-radius: 10px;
   background: white;
 }
+
+.home-page-sign-up {
+  width: 620px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+  }
+
 input{
   padding: 10px 12px;
   border-radius: 4px;
