@@ -100,10 +100,7 @@ router.get('/refine/:id', async (req,res)=>{
     }
 })
 
-// find a home link
-router.get('/new', (req, res) => {
-    res.render('find-a-home')
-})
+
 
 
 // find pets link

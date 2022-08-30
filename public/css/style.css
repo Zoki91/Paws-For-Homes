@@ -7,7 +7,7 @@ form {
   width: 360px;
   margin: 0 auto;
   padding: 30px;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 1px 2px 3px rgba(0,0,0.4,0.7);
   border-radius: 10px;
   background: white;
 }
@@ -15,10 +15,10 @@ form {
 .home-page-sign-up {
   width: 620px;
   margin: 0 auto;
-  padding: 30px;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  padding: 20px;
+  box-shadow: 1px 2px 3px rgba(0,0,0.4,0.7);
   border-radius: 10px;
-  background: white;
+  background: #9facb7;
   }
 
 input{
