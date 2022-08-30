@@ -1,0 +1,18 @@
+<body style="background-color: #C6DAE7">
+{{#if loggedIn}}
+{{else}}
+<div class="row">
+  <div class="col-md-6 mt-4 p-5">
+<form action="/login">
+  <h2>Login</h2>
+  <label for="email">Email</label>
+  <input type="text" name="email" required />
+  <label for="password">Password</label>
+  <input type="password" name="password" required />
+     <button>Login</button>
+</form>
+</div>
+<p> I see you're not logged in. get your ass off the couch and <a href="/login">Sign Up</a></p>
+{{/if}}
+</body>
+
