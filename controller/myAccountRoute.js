@@ -79,12 +79,26 @@ router.delete('/:id',
             res.status(200).json(petData)
         })
         .catch(err => {
-            console.log(err)
+            console.log(JSON.stringify(petData))
             res.status(500).json(err)
         })
 })
 
-
+router.get('/refine/:id', async (req,res)=>{
+    try {
+        const dbUserData = await User.findByPk(req.params.id,{
+            include:[{
+                model: Pet
+            }]
+        })
+        const userData = dbUserData.get({plain:true});
+        console.log(userData)
+        res.render('account', { userData })
+        
+    } catch (error) {
+        res.status(500).json(err)
+    }
+})
 
 // find a home link
 router.get('/new', (req, res) => {
