@@ -86,10 +86,7 @@ router.delete('/:id',
 
 
 
-// find a home link
-router.get('/new', (req, res) => {
-    res.render('find-a-home')
-})
+
 
 
 // find pets link
