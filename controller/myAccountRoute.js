@@ -84,21 +84,7 @@ router.delete('/:id',
         })
 })
 
-router.get('/refine/:id', async (req,res)=>{
-    try {
-        const dbUserData = await User.findByPk(req.params.id,{
-            include:[{
-                model: Pet
-            }]
-        })
-        const userData = dbUserData.get({plain:true});
-        console.log(userData)
-        res.render('account', { userData })
-        
-    } catch (error) {
-        res.status(500).json(err)
-    }
-})
+
 
 
 
