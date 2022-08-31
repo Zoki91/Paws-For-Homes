@@ -37,9 +37,19 @@ router.get('/new', (req, res) => {
     res.render('find-a-home')
 })
 
-// find a home link
-router.get('/new2', (req, res) => {
-    res.render('account')
+router.get('/refine/:id', async (req,res)=>{
+    try {
+        const dbUserData = await User.findByPk(req.params.id,{
+            include:[{
+                model: Pet
+            }]
+        })
+        const userData = dbUserData.get({plain:true});
+        console.log(userData)
+        res.render('account', { userData })
+        
+    } catch (error) {
+        res.status(500).json(err)
+    }
 })
-
 module.exports = router
