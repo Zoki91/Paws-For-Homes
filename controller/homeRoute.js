@@ -5,6 +5,7 @@ const { User, Pet } = require('../models')
 
 //GET all pets and rander home page
 router.get('/', (req, res) => {
+    req.session.save()
     Pet.findAll()
         .then(petsData => {
             // map all pets create a array
@@ -51,6 +52,5 @@ router.get('/refine/:id', async (req,res)=>{
         res.status(500).json(err)
     }
 })
-
 
 module.exports = router
