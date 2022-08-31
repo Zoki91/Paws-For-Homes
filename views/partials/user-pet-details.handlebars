@@ -1,4 +1,17 @@
-<section class="card">
+{{!-- <section class="card">
     <header>Name: {{name}}</header>
     <p>Type of Pet:{{typeOfPet}}</p>
-</section>
+    <button class="remove-details">Delete</button>
+</section> --}}
+ <div class="col-lg-6 mb-4">
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{typeOfPet}}</h6>
+            <p class="card-text">{{description}}</p>
+            <p class="card-text">Location: {{location}}</p>
+            <button type="button" class="btn btn-outline-primary update-details">Update</button>
+            <button type="button" class="btn btn-outline-danger remove-details">Delete</button>
+        </div>
+    </div>
+</div>
