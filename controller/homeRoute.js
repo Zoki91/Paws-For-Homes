@@ -53,4 +53,9 @@ router.get('/refine/:id', async (req,res)=>{
     }
 })
 
+// find a pet link
+router.get('/find', (req, res) => {
+    res.render('find-a-pet',{loggedIn: req.session.loggedIn})
+})
+
 module.exports = router
