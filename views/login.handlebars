@@ -18,29 +18,31 @@
 
 <div class="row">
   <div class="col-md-6 mt-4 p-5">
-    <form action="/api/users/login">
+    <form class="login-form">
       <h2>Login</h2>
       <label for="email">Email</label>
-      <input type="text" name="email" required />
+      <input type="text" name="email" id="email-login" required />
       <label for="password">Password</label>
-      <input type="password" name="password" required />
+      <input type="password" name="password" id="password-login" required />
       <button>Login</button>
     </form>
   </div>
 
   <div class="col-md-3 mt-4 p-5">
-    <form action="/api/users/">
+    <form class="signup-form">
       <h2>Sign Up</h2>
       <label for="email">Email</label>
-      <input type="text" name="email" required />
+      <input type="text" name="email" id="email-signup" required />
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
+      <input type="password" id="password-signup" name="password" required />
       <label for="username">Username</label>
-      <input type="text" name="username" required />
+      <input type="text" name="username" id="name-signup" required />
       <label for="phonenumber">Phone Number</label>
-      <input type="text" name="phoneNumber" required />
+      <input type="text" name="phoneNumber" id = "phonenumber-signup" required />
       <div class="password error"></div>
       <button>Sign Up</button>
     </form>
   </div>
 </div>
+
+<script src="./js/login.js"></script>
