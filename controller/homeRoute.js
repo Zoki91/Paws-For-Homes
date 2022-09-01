@@ -27,14 +27,14 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
     // if login success, redirect to home page
     if (req.session.loggedIn) {
-       return res.redirect('/')
+       return res.redirect('/myaccount')
     }
     res.render('login')
 })
 
 // find a home link
 router.get('/new', (req, res) => {
-    res.render('find-a-home')
+    res.render('find-a-home',{loggedIn: req.session.loggedIn})
 })
 
 router.get('/refine/:id', async (req,res)=>{

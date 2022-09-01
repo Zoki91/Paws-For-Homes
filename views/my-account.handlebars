@@ -1,0 +1,20 @@
+<div>
+  <h1>My Account</h1>
+  <div class="container">
+    <div class="row">
+      <section>
+        {{#if pets}}
+        {{#each pets as |pet|}}
+        {{> user-pet-details}}
+        {{/each}}
+        {{else}}
+        <p class="accountP">Looks like you aren't trying to find a home for your pet currently</p>
+        {{/if}}
+      </section>
+    </div>
+  </div>
+</div>
+<script src="./js/updateDetails.js">
+
+      
+</script>
