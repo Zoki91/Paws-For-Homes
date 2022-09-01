@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth')
 
 // GET info and render My Account page
 router.get('/',
-    // withAuth, // TODO: uncomment this after finish testing
+    withAuth, // TODO: uncomment this after finish testing
     (req, res) => {
         // all pets
         Pet.findAll({

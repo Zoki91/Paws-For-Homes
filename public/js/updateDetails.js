@@ -1,13 +1,9 @@
-if(element.classList.contains('.remove-details')){
-    var button = document.querySelector(".remove-details");
-}
 
 
-if(button){
-    buttonChecked = button
-}
-
-dbuttonChecked.addEventListener('click', function(event){
+const removeDetails = document.getElementsByClassName('remove-details');
+for (i=0; i < removeDetails.length; i++){
+  removeDetails[i].addEventListener('click', function(event){
     event.preventDefault();
-    console.log('button pressed')
-})
+    console.log('button pressed');
+    this.parentNode.parentNode.removeChild(this.parentNode);
+  })}
