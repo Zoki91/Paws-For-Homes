@@ -8,7 +8,14 @@
         {{> user-pet-details}}
         {{/each}}
         {{else}}
-        <p class="accountP">Looks like you aren't trying to find a home for your pet currently</p>
+          <h2 class="accountP">Looks like your pet hasn't found a home yet. <br>Click Find a Home to get started!</h2>
+        <div class="container-fluid">
+    <div class="row">
+      <section class="col-md-12 mt-4 p-5">
+        <div class="d-flex flex-wrap align-items-center w-200 h-200">
+          <img src="img/pet-adopt.jpg" alt="" class="w-100" />
+        </div>
+      
         {{/if}}
       </section>
     </div>
