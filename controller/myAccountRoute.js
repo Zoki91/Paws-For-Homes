@@ -86,9 +86,6 @@ router.delete('/:id',
 
 
 
-
-
-
 // find pets link
 router.get('/find', (req, res) => {
     res.render('find-a-pet')

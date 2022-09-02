@@ -25,33 +25,6 @@ router.get('/', (req, res) => {
 })
 
 
-// //GET one pet by id ---------------------- 
-// router.get('/:id',
-//     // withAuth, // TODO: uncomment this after finish testing 
-//     (req, res) => {
-//         Pet.findOne({
-//             where: { id: req.params.id },
-//             include: [
-//                 {
-//                     model: User,
-//                     attributes: ['username', 'email', 'phoneNumber']
-//                 },
-//             ]
-//         })
-//             .then(petData => {
-//                 // if not found, return message
-//                 if (!petData) {
-//                     return res.status(404).json({ message: 'Cannot found pet by this id!' })
-//                 }
-//                 // else, return data
-//                 res.status(200).json(petData)
-//             })
-//             // handle err
-//             .catch(err => {
-//                 console.log(err)
-//                 res.status(500).json(err)
-//             })
-//     })
 
 
 
@@ -62,9 +35,6 @@ router.get('/search',
         Pet.findAll({
             where: {
                 typeOfPet: req.body.typeOfPet,
-                breed: req.body.breed,
-                gender: req.body.gender,
-                location: req.body.location
             },
             include: [
                 {

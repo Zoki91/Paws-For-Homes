@@ -37,21 +37,7 @@ router.get('/new', (req, res) => {
     res.render('find-a-home',{loggedIn: req.session.loggedIn})
 })
 
-router.get('/refine/:id', async (req,res)=>{
-    try {
-        const dbUserData = await User.findByPk(req.params.id,{
-            include:[{
-                model: Pet
-            }]
-        })
-        const userData = dbUserData.get({plain:true});
-        console.log(userData)
-        res.render('account', { userData })
-        
-    } catch (error) {
-        res.status(500).json(err)
-    }
-})
+
 
 // find a pet link
 router.get('/find', (req, res) => {
