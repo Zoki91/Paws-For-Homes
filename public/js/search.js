@@ -32,11 +32,11 @@ const render = () => {
       cardText5.setAttribute("class", "card-text");
 
       cardTitle.textContent = pet.typeOfPet;
-      cardSubtitle.textContent = pet.name;
+      cardSubtitle.textContent = "Name: " + pet.name;
       cardText1.textContent = "Breed: " + pet.breed;
-      cardText2.textContent = pet.age;
-      cardText3.textContent = pet.gender;
-      cardText4.textContent = pet.description;
+      cardText2.textContent = "Age: " + pet.age;
+      cardText3.textContent = "Gender: " + pet.gender;
+      cardText4.textContent = "Description: " + pet.description;
       cardText5.textContent = "Location: " + pet.location;
 
       cardBody.appendChild(cardTitle);

@@ -100,7 +100,7 @@ router.post('/login', (req, res) => {
                 req.session.loggedIn = true
                 res.status(200).json({
                     user: userData,
-                    message: 'LOGGIN SUCCESS!'
+                    message: 'LOGIN SUCCESS!'
                 })
             })
         })

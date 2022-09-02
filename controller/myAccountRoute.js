@@ -32,7 +32,7 @@ router.get('/',
     })
 
 
-// When click on update btn, rander edit pet page
+// // When click on update btn, rander edit pet page
 router.get('/edit/:id', 
 // withAuth, // TODO: uncomment this after finish testing
 (req, res) => {
