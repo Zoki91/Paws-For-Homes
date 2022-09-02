@@ -9,10 +9,15 @@
           
             <h5 class="card-title"></i>{{name}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{typeOfPet}}</h6>
-            <p class="card-text">{{description}}</p>
+            <p class="card-text">Description: {{description}}</p>
             <p class="card-text">Location: {{location}}</p>
-            <button type="button" class="btn btn-outline-primary update-details">Update</button>
-            <button type="button" class="btn btn-outline-danger remove-details">Delete</button>
+            <p class="card-text">User Name: {{user.username}}</p>
+            <p class="card-text">Phone Number: {{user.phoneNumber}}</p>
+            <p class="card-text">Email: {{user.email}}</p>
+            <p class="card-text">Location: {{location}}</p>
+            <a href="/myaccount/edit/{{pet.id}}" class="btn btn-dark update-details">Update</a>
+            <a href="/myaccount/edit/{{pet_id}}" class="btn btn-dark update-details">Delete</a>
+            {{!-- <button type="button" class="btn btn-outline-danger remove-details">Delete</button>  FOR Oliver to do...--}} 
         </div>
     </div>
 </div>

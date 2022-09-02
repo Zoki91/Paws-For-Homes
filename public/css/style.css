@@ -8,6 +8,7 @@ form h2
 .accountP {
   align-items: center;
 }
+
 form, .search-form {
   width: 360px;
   margin: 0 auto;
@@ -16,7 +17,9 @@ form, .search-form {
   border-radius: 10px;
   background: white;
 }
-
+.h1-test {
+  color:red
+}
 .card-width {
   width: 30rem;
 }
