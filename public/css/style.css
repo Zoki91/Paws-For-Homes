@@ -4,10 +4,11 @@ form h2
   font-weight: 900;
   margin-bottom: 40px;
 }
+
 .accountP {
   align-items: center;
 }
-form {
+form, .search-form {
   width: 360px;
   margin: 0 auto;
   padding: 30px;
@@ -15,6 +16,11 @@ form {
   border-radius: 10px;
   background: white;
 }
+
+.card-width {
+  width: 30rem;
+}
+
 
 .register-form {
   height: 700px;
