@@ -93,11 +93,8 @@ router.put('/:id',
     (req, res) => {
         Pet.update(
             {
-                type: req.body.type,
-                name: req.body.name,
-                breed: req.body.breed,
+     
                 age: req.body.age,
-                gender: req.body.gender,
                 description: req.body.description,
                 location: req.body.location,
                 user_id: req.session.user_id
@@ -106,10 +103,8 @@ router.put('/:id',
                 where: { id: req.params.id }
             })
             .then(petData => {
-                if (!petData[0]) {
-                    return res.status(404).json({ message: 'Cannot found pet by this id!' })
-                }
-                res.status(200).json(petData)
+                
+                res.status(200).json({data: 'ok'})
             })
             // handle err
             .catch(err => {

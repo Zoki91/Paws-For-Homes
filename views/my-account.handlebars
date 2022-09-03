@@ -5,7 +5,7 @@
       <section>
         {{#if pets}}
         {{#each pets as |pet|}}
-        {{> user-pet-details}}
+        {{> user-pet-details pet=pet}}
         {{/each}}
         {{else}}
           <h2 class="accountP">Looks like your pet hasn't found a home yet. <br>Click Find a Home to get started!</h2>
@@ -13,7 +13,7 @@
     <div class="row">
       <section class="col-md-12 mt-4 p-5">
         <div class="d-flex flex-wrap align-items-center w-200 h-200">
-          <img src="img/pet-adopt.jpg" alt="" class="w-100" />
+          <img src="/img/pet-adopt.jpg" alt="" class="w-100" />
         </div>
       
         {{/if}}
@@ -21,7 +21,5 @@
     </div>
   </div>
 </div>
-<script src="./js/updateDetails.js">
-
-      
-</script>
+<script src="/js/updateDetails.js"></script>
+<script src="/js/delete-pet.js"></script>
