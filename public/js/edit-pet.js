@@ -1,13 +1,9 @@
 const editPet = async (e) => {
     e.preventDefault()
 
-    const typeOfPet = document.querySelector('input[name="#"]').value
-    const description = document.querySelector('textarea[name="#"]').value.trim()
-    const breed = document.querySelector('input[name="#"]').value.trim()
-    const age = document.querySelector('input[name="#"]').value.trim()
-    const gender = document.querySelector('input[name="#"]').value.trim()
-    const location = document.querySelector('input[name="#"]').value.trim()
-    const name = document.querySelector('input[name="#"]').value.trim()
+    const description = document.querySelector('input[name="description-update"]').value.trim()
+    const age = document.querySelector('input[name="age-update"]').value.trim()
+    const location = document.querySelector('select[name="cities-update"]').value.trim()
     
     const pet_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
@@ -16,11 +12,8 @@ const editPet = async (e) => {
     const response = await fetch(`/api/pets/${pet_id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            typeOfPet,
-            name,
-            breed,
+
             age,
-            gender,
             description,
             location
         }),
@@ -36,4 +29,8 @@ const editPet = async (e) => {
     }
 }
 
-document.querySelector('#').addEventListener('submit', editPet)
+document.querySelector('#update-pet').addEventListener('click', editPet)
+
+
+console.log('aaa');
+console.log(document.querySelector("#update-pet"))

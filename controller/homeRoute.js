@@ -27,21 +27,21 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
     // if login success, redirect to home page
     if (req.session.loggedIn) {
-       return res.redirect('/myaccount')
+        return res.redirect('/myaccount')
     }
     res.render('login')
 })
 
 // find a home link
 router.get('/new', (req, res) => {
-    res.render('find-a-home',{loggedIn: req.session.loggedIn})
+    res.render('find-a-home', { loggedIn: req.session.loggedIn })
 })
 
 
 
 // find a pet link
 router.get('/find', (req, res) => {
-    res.render('find-a-pet',{loggedIn: req.session.loggedIn})
+    res.render('find-a-pet', { loggedIn: req.session.loggedIn })
 })
 
 
