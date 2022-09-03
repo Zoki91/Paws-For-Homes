@@ -1,3 +1,7 @@
+
+
+
+
 const loginForm = async (event) => {
 
   event.preventDefault();
@@ -42,8 +46,6 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/myaccount');
-    } else {
-      alert(response.statusText);
     }
   } else{
     window.prompt('Looks like you forgot to add some details!')
