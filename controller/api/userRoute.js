@@ -1,6 +1,15 @@
 // import modules
 const router = require('express').Router()
 const { User, Pet } = require('../../models')
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_NAME,
+    pass: process.env.EMAIL_PASSWORD
+  }
+});
 
 // GET all User
 router.get('/', (req, res) => {
@@ -64,6 +73,19 @@ router.post('/', (req, res) => {
                 req.session.loggedIn = true
                 res.status(200).json(userData)
             })
+            var mail = {
+                from:'pawsforhomes2022@gmail.com',
+                to:`${userData.email}`,
+                subject: "Test Subject",
+                text:"this is a test"
+            }
+            transporter.sendMail(mail, function(error, info){
+                if (error) {
+                  console.log(error);
+                } else {
+                  console.log('Email sent: ' + info.response);
+                }
+              });
         })
         // handle err
         .catch(err => {
