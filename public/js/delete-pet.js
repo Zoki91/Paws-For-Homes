@@ -1,19 +1,23 @@
-// const deletePet = async (e) => {
-//     e.preventDefault()
+ document.querySelector('#delete-btn').addEventListener('click', deletePet)
 
-//     const pet_id = window.location.toString().split('/')[
-//         window.location.toString().split('/').length - 1
-//     ]
+const removeDetails = document.getElementsByClassName('delete-btn');
+for (i=0; i < removeDetails.length; i++){
+  removeDetails[i].addEventListener('click', deleteFunction)}
 
-//     const response = await fetch(`/api/pets/${pet_id}`, {
-//         method: 'DELETE'
-//     })
 
-//     if (response.ok) {
-//         document.location.replace('/myaccount')
-//     } else {
-//         alert(response.statusText)
-//     }
-// }
+async function deleteFunction (event){
+    event.preventDefault();
+    let petId = this.id;
+    this.parentNode.parentNode.removeChild(this.parentNode);
+    const response = await fetch(`api/pets/${petId}`,{
+        method:'DELETE'
+    })
 
-// document.querySelector('#delete-btn').addEventListener('click', deletePet)
+    if(response.ok){
+        document.location.replace('/myaccount')
+    } else{
+        alert(response.statusText)
+    }
+    
+}
+
