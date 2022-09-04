@@ -39,6 +39,10 @@ WHEN I click on the Find a home option
 THEN I am prompted to enter infomation for a new pet
 WHEN I click on the Find a pet option
 THEN I am prompted to enter infomation to search a pet
+WHEN I search a type of pet
+THEN I am prompted with all the pets info I searched also with a enquire button.
+WHEN I click on the equire button
+THEN I am prompted with owner contact detail
 WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
