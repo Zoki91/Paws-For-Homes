@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth')
 
 // GET info and render My Account page
 router.get('/',
-    withAuth, // TODO: uncomment this after finish testing
+    withAuth, 
     (req, res) => {
         // all pets
         Pet.findAll({
@@ -32,9 +32,9 @@ router.get('/',
     })
 
 
-// // When click on update btn, rander edit pet page
+// When click on update btn, rander edit pet page
 router.get('/edit/:id', 
-// withAuth, // TODO: uncomment this after finish testing
+ withAuth, 
 (req, res) => {
     Pet.findByPk(
         req.params.id,
@@ -67,7 +67,7 @@ router.get('/edit/:id',
 
 // When click on delete btn, delete pet info by id
 router.delete('/:id', 
-// withAuth, // TODO: uncomment this after finish testing
+ withAuth, 
 (req, res) => {
     Pet.destroy({
         where: { id: req.params.id }
