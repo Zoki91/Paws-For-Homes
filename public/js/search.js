@@ -19,6 +19,7 @@ const render = () => {
       const cardText3 = document.createElement("p");
       const cardText4 = document.createElement("p");
       const cardText5 = document.createElement("p");
+      const enquireButton = document.createElement("button");
 
       container.setAttribute("class", "col-lg-4 mb-4");
       card.setAttribute("class", "card card-width search-form");
@@ -30,6 +31,8 @@ const render = () => {
       cardText3.setAttribute("class", "card-text");
       cardText4.setAttribute("class", "card-text");
       cardText5.setAttribute("class", "card-text");
+      enquireButton.setAttribute("class","enquire-button")
+      enquireButton.setAttribute("id",pet.id)
 
       cardTitle.textContent = pet.typeOfPet;
       cardSubtitle.textContent = "Name: " + pet.name;
@@ -38,6 +41,7 @@ const render = () => {
       cardText3.textContent = "Gender: " + pet.gender;
       cardText4.textContent = "Description: " + pet.description;
       cardText5.textContent = "Location: " + pet.location;
+      enquireButton.textContent = "Enquire"
 
       cardBody.appendChild(cardTitle);
       cardBody.appendChild(cardSubtitle);
@@ -46,6 +50,7 @@ const render = () => {
       cardBody.appendChild(cardText3);
       cardBody.appendChild(cardText4);
       cardBody.appendChild(cardText5);
+      cardBody.appendChild(enquireButton)
 
       card.appendChild(cardBody);
       container.appendChild(card);
@@ -68,3 +73,30 @@ fetch("api/pets/")
     render();
   });
 
+
+// const enquireDetails = document.getElementsByClassName('enquire-button');
+// for (i=0; i < enquireDetails.length; i++){
+//   enquireDetails[i].addEventListener('click', enquireFunction)
+// }
+  
+
+
+
+document.body.addEventListener('click', function (event) {
+  if(event.target.classList.contains('enquire-button')) {
+    enquireFunction(event)
+  };
+});
+
+async function enquireFunction (event){
+    event.preventDefault();
+    let petId = event.target.id
+    console.log(petId)
+    const response = await fetch(`api/pets/${petId}`,{
+      method:'GET'
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    
+
+}
