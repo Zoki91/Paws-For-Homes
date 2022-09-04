@@ -2,6 +2,7 @@
 
 ## Description
 This is the second porject of our Monash University full stack development bootcamp. The goal of this project was to build a node based full stack application which contents database for handling data, handlebars to display the HTML and could GET and POST data from and to the client side.
+#
 
 ## User Story
 ```
@@ -9,7 +10,7 @@ AS A pets owner I want an application that can upload my pets information.
 I WANT an application to upload my pets information.
 SO THAT I can find some one to adopt or look after my pets.
 ```
-
+#
 ## Acceptance Criteria
 ```
 GIVEN a pets adoption service site
@@ -49,7 +50,7 @@ WHEN I am idle on the site for more than a set time
 WHEN I am prompted to log in again
 
 ```
-
+#
 ## Installation
 * Install App
 ```
@@ -72,6 +73,7 @@ npm run seed
 ```
 npm start
 ```
+#
 
 ## Screenshots
 ![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_%20(1).png)
@@ -81,9 +83,38 @@ npm start
 ![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_myaccount%20(1).png)
 ![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_myaccount%20(2).png)
 ![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_new%20(1).png)
-
+#
 
 ## URLs
 * Github: https://github.com/Zoki91/Paws-For-Homes  
 * Deployed URL: https://paws-for-homes.herokuapp.com/ 
+#
 
+## 🔗 GitHub Links
+### Oliver 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/OGray96/)
+
+### Zoran 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Zoki91/)
+
+### Fred 
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Fredbian/)
+
+#
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://choosealicense.com/licenses/mit/)
+
+#
+
+## 🚀 About Us
+Hi there, our names are Oliver, Zoran & Fred and we are currently studying in the Monash University Coding Bootcamp 2022.
+
+#
+
+## Feedback
+
+If you have any feedback, please reach out to us at any of the GitHub profile links
