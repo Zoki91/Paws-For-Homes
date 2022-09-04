@@ -156,7 +156,39 @@ router.delete('/:id',
                 console.log(err)
                 res.status(500).json(err)
             })
-    })
+})
 
+router.post('/enquire', (req,res) => {
+    const {email,message} = req.body;
+    if(email && message){
+        const emailMessage = {
+            email,
+            message
+        }
+
+        var mail = {
+            from:'pawsforhomes2022@gmail.com',
+            to:`${email}`,
+            subject: "Pet Enquiry",
+            text: `${message}`
+        }
+
+        transporter.sendMail(mail, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+        });
+        
+
+        const response = {
+            status: 'success',
+            body: emailMessage,
+        };
+        console.log(response);
+        res.status(201).json(response);
+    }
+})
 
 module.exports = router
