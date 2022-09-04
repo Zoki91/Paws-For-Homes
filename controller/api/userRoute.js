@@ -77,7 +77,7 @@ router.post('/', (req, res) => {
                 from:'pawsforhomes2022@gmail.com',
                 to:`${userData.email}`,
                 subject: "Thanks for signing up!",
-                text:"Welcome to Paws for Homes. We hope that whether you are looking for a pet or a new home for one that you have a great experience with us."
+                text:"Welcome to Paws for Homes. We hope that whether you are looking for a pet or a new home for one, that you have a great experience with us."
             }
             transporter.sendMail(mail, function(error, info){
                 if (error) {
