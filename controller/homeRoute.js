@@ -44,6 +44,22 @@ router.get('/find', (req, res) => {
     res.render('find-a-pet', { loggedIn: req.session.loggedIn })
 })
 
-
+router.get('*', (req, res) => {
+        req.session.save()
+    Pet.findAll()
+        .then(petsData => {
+            // map all pets create a array
+            const pets = petsData.map(pet => pet.get({ plain: true }))
+            // pass all pets to homepage
+            res.render('homepage', {
+                pets,
+                loggedIn: req.session.loggedIn
+            })
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json(err)
+        })
+});
 
 module.exports = router

@@ -36,7 +36,7 @@ const render = () => {
       enquireButton.setAttribute("data-bs-toggle","modal")
       enquireButton.setAttribute("data-bs-target","#exampleModal")
       enquireButton.setAttribute("type","button")
-      enquireButton.setAttribute("id",pet.id)
+      enquireButton.setAttribute("id", pet.id)
 
 
       cardTitle.textContent = pet.typeOfPet;
@@ -93,6 +93,12 @@ document.body.addEventListener('click', function (event) {
   };
 });
 
+document.body.addEventListener('click', function (event) {
+  if(event.target.classList.contains('form-button')) {
+    enquireEmail(event)
+  };
+});
+
 async function enquireFunction (event){
     event.preventDefault();
     let petId = event.target.id
@@ -106,17 +112,71 @@ async function enquireFunction (event){
       modal.innerHTML ="";
       const email = document.createElement("p");
       const phoneNumber = document.createElement("p");
+      const formDiv = document.createElement('div');
+      const formLabel = document.createElement('label');
+      const formInput = document.createElement('textarea');
+      const formSeperator = document.createElement('p');
+      const formButton = document.createElement('button');
+      
 
+      formInput.setAttribute('placeholder', "Please write the message you would like to send. Don't forget to add your details so they can get back to you!")
+      formInput.setAttribute('class','form-input')
+      formInput.setAttribute('id','test')
+      formInput.setAttribute('cols','1')
+      formInput.setAttribute('rows','1')
+      formInput.setAttribute('style','width:100%; height: 220px;')
+      formButton.setAttribute('class','form-button')
+      formButton.setAttribute('type','form-button')
+      formButton.setAttribute('id',data.user.email)
 
-
-
-
-      email.textContent = "Email: " + data.user.email
+      email.textContent = "Or if you would prefer to send them an email use the area below!"
       phoneNumber.textContent = "Phone Number: " + data.user.phoneNumber
+      formButton.textContent = "Send Message";
+      formSeperator.textContent = "----------------------"
 
-      modal.appendChild(email)
+      formDiv.appendChild(formLabel);
+      formDiv.appendChild(formInput);
+      formDiv.appendChild(formButton);
+
+
       modal.appendChild(phoneNumber)
+      modal.appendChild(formSeperator)
+      modal.appendChild(email)
+      modal.appendChild(formDiv);
+
+
+
+      
     })
     
+
+}
+
+async function enquireEmail (event){
+  const email = event.target.id
+  const message = document.querySelector('.form-input').value
+  const emailMessage = {
+    email: email,
+    message: message
+  }
+  if(message){
+    const response = await fetch(`api/pets/enquire`,{
+      method:'POST',
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(emailMessage)
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Successful POST request:', data);
+      event.target.textContent = 'Message Sent!'
+      return data;
+    })
+  }else{
+    window.alert('Looks like you forgot to add a message!')
+  }
+  
+ 
 
 }
