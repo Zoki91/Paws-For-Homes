@@ -9,16 +9,16 @@
           
             <h5 class="card-title"></i>{{name}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{typeOfPet}}</h6>
-            <p class="card-text">Description: {{description}}</p>
+            <p class="card-text-1">Description: {{description}}</p>
             <p class="card-text">Location: {{location}}</p>
-            <p class="card-text">User Name: {{user.username}}</p>
+            {{!-- <p class="card-text">User Name: {{user.username}}</p> --}}
             <p class="card-text">Age: {{age}}</p>
-            <p class="card-text">Phone Number: {{user.phoneNumber}}</p>
-            <p class="card-text">Email: {{user.email}}</p>
+            {{!-- <p class="card-text">Phone Number: {{user.phoneNumber}}</p> --}}
+            {{!-- <p class="card-text">Email: {{user.email}}</p> --}}
             <p class="card-text">Location: {{location}}</p>
             <a href="/myaccount/edit/{{pet.id}}" class="btn btn-dark update-details">Update</a>
 
-            <button type="button" id={{id}}  class="btn btn-outline-danger remove-details delete-btn">Delete</button> 
+            <button type="button" id={{id}} class="btn btn-outline-dark remove-details delete-btn">Delete</button> 
         </div>
     </div>
 </div>
