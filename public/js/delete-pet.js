@@ -1,4 +1,3 @@
- document.querySelector('#delete-btn').addEventListener('click', deletePet)
 
 const removeDetails = document.getElementsByClassName('delete-btn');
 for (i=0; i < removeDetails.length; i++){
