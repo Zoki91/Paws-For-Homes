@@ -69,6 +69,11 @@ npm start
 ```
 
 ## Screenshots
+![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_.png)
+![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_find.png)
+![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_login.png)
+![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_myaccount.png)
+![Alt text](https://github.com/Zoki91/Paws-For-Homes/blob/master/public/img/paws-for-homes.herokuapp.com_new.png)
 
 
 ## URLs
