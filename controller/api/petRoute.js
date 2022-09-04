@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
 
 // GET pets by user search input ------------- not completed yet
 router.get('/search',
-    // withAuth,  // TODO: uncomment this after finish testing
+     withAuth,  
     (req, res) => {
         Pet.findAll({
             where: {
@@ -65,7 +65,7 @@ router.get('/search',
 
 // Create a new pet
 router.post('/',
-    // withAuth, // TODO: uncomment this after finish testing 
+     withAuth,  
     (req, res) => {
         Pet.create({
             typeOfPet: req.body.typeOfPet,
@@ -89,7 +89,7 @@ router.post('/',
 
 // Update a pet
 router.put('/:id',
-    // withAuth, // TODO: uncomment this after finish testing 
+     withAuth, 
     (req, res) => {
         Pet.update(
             {
@@ -116,7 +116,7 @@ router.put('/:id',
 
 // DELETE a pet
 router.delete('/:id',
-    // withAuth, // TODO: uncomment this after finish testing
+    withAuth, 
     (req, res) => {
         Pet.destroy({
             where: { id: req.params.id }
