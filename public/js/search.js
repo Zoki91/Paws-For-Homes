@@ -12,8 +12,8 @@ const render = () => {
       const container = document.createElement("div");
       const card = document.createElement("div");
       const cardBody = document.createElement("div");
-      const cardTitle = document.createElement("h2");
-      const cardSubtitle = document.createElement("h6");
+      const cardTitle = document.createElement("h5");
+      const cardSubtitle = document.createElement("h1");
       const cardText1 = document.createElement("p");
       const cardText2 = document.createElement("p");
       const cardText3 = document.createElement("p");
@@ -23,24 +23,24 @@ const render = () => {
       container.setAttribute("class", "col-lg-4 mb-4");
       card.setAttribute("class", "card card-width search-form");
       cardBody.setAttribute("class", "card-body");
-      cardTitle.setAttribute("class", "card-title");
-      cardSubtitle.setAttribute("class", "card-subtitle mb-2 text-muted");
-      cardText1.setAttribute("class", "card-text");
-      cardText2.setAttribute("class", "card-text");
-      cardText3.setAttribute("class", "card-text");
-      cardText4.setAttribute("class", "card-text");
-      cardText5.setAttribute("class", "card-text");
+      cardTitle.setAttribute("class", "card-title-typeofpet"); // Type of Pet
+      cardSubtitle.setAttribute("class", "card-title1 "); // Name of Pet
+      cardText1.setAttribute("class", "card-text-breed"); // Breed
+      cardText2.setAttribute("class", "card-text-age"); // Age of Pet
+      cardText3.setAttribute("class", "card-text-gender"); // Gender of Pet
+      cardText4.setAttribute("class", "card-text-description"); // Description
+      cardText5.setAttribute("class", "card-text-location"); // Location
 
       cardTitle.textContent = pet.typeOfPet;
-      cardSubtitle.textContent = "Name: " + pet.name;
+      cardSubtitle.textContent = pet.name;
       cardText1.textContent = "Breed: " + pet.breed;
       cardText2.textContent = "Age: " + pet.age;
       cardText3.textContent = "Gender: " + pet.gender;
       cardText4.textContent = "Description: " + pet.description;
       cardText5.textContent = "Location: " + pet.location;
 
-      cardBody.appendChild(cardTitle);
       cardBody.appendChild(cardSubtitle);
+      cardBody.appendChild(cardTitle);
       cardBody.appendChild(cardText1);
       cardBody.appendChild(cardText2);
       cardBody.appendChild(cardText3);

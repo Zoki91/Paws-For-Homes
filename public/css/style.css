@@ -1,3 +1,4 @@
+/* CSS Styling */
 form h2
 .accountP {
   font-size: 2.4em;
@@ -6,14 +7,31 @@ form h2
 }
 .heading  {
   color: #111; 
-  font-family: 'Helvetica Neue', sans-serif; 
+  font-family: 'Roboto', sans-serif;
   font-size: 500px;
   font-weight: bold; 
   letter-spacing: -3px; 
   line-height: 1; 
   text-align: center; 
   box-shadow: rgb(199, 56, 56);
+  }
+
+.searchHeading {
+  color: #feda6a;
 }
+
+.findhome-heading {
+  color: #feda6a;
+}
+
+.updatepet-heading {
+  color: #feda6a;
+}
+
+.findhome-heading {
+  color: #feda6a;
+}
+
 
 h1 {
   font-size: 50px;
@@ -21,42 +39,68 @@ h1 {
   letter-spacing: -4px; 
   line-height: 1; 
   text-align: center; 
+  font-family: 'Roboto', sans-serif;
 }
+
+.myaccountH {
+  text-align: left;
+  margin-left: 10px;
+  color: #feda6a;
+}
+
+.card-title1 {
+  text-align: left; 
+  font-family: 'Roboto', sans-serif;
+
+} 
 .subheading  {
   color: rgb(237, 252, 101); 
-  font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
   letter-spacing: -3px; 
+
 }
 .accountP {
   align-items: center;
+  color: #feda6a;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 380px;
 }
 
-form, .search-form {
+form, .search-form, .sectionform {
   width: 360px;
   margin: 0 auto;
   padding: 30px;
   box-shadow: 1px 2px 3px rgba(0,0,0.4,0.7);
   border-radius: 10px;
-  background: white;
+  background: #fbe3e8;
+  font-family: 'Roboto', sans-serif;
 }
 
-
-
-.card-body-2 {
-  width: 534px;
+.login-form, .signup-form{
+  width: 360px;
   margin: 0 auto;
   padding: 30px;
   box-shadow: 1px 2px 3px rgba(0,0,0.4,0.7);
   border-radius: 10px;
-  background: white; */
-} 
-
-
-.card-width {
-  width: 30rem;
+  background: #fbe3e8;
+  font-family: 'Roboto', sans-serif;
 }
 
+
+.card-body-2 {
+  width: 20rem;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0.4,0.7);
+  border-radius: 10px;
+  background: rgba(234, 236, 236)
+} 
+
+.card-width {
+  width: 20rem;
+}
 
 .register-form {
   height: 700px;
@@ -94,7 +138,6 @@ form, .search-form {
 /* set button(top and bottom of the scrollbar) */
 ::-webkit-scrollbar-button {display:none}
 
-
 .home-page-sign-up {
   width: 620px;
   margin: 0 auto;
@@ -115,10 +158,11 @@ label{
   display: block;
   margin: 20px 0 10px;
 }
+
 button{
   margin-top: 30px;
   border-radius: 36px;
-  background: #FEE996;
+  background: #feda6a;
   border:0;
   text-transform: uppercase;
   font-weight: 700;
@@ -131,5 +175,80 @@ button{
   color: #ff0099;
   margin: 10px 2px;
   font-size: 0.8em;
+  font-weight: bold;
+}
+
+.btn, .btn-outline-dark {
+  margin: 0%;
+}
+
+.card-text-1 {
+  color: red;
+}
+
+.card-text1 {
+  align-items: left;
+}
+
+
+.whyweexist {
+  color: white;
+}
+
+.whoweare {
+  color:white;
+}
+
+#whyweexistP {
+  color: white;
+}
+
+#whoweareP {
+  color: white;
+}
+
+.whyUs {
+color: white;
+}
+
+#whyUs-P {
+  color: white;
+}
+.card-title-typeofpet {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.card-text-breed {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.card-text-age {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.card-text-gender {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.card-text-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.card-text-location {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.h2-signUp {
+  font-weight: bold;
+}
+
+.h2-login {
   font-weight: bold;
 }
