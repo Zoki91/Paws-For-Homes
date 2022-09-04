@@ -2,7 +2,15 @@
 const router = require('express').Router()
 const { User, Pet } = require('../../models')
 const withAuth = require('../../utils/auth')
+var nodemailer = require('nodemailer');
 
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_NAME,
+    pass: process.env.EMAIL_PASSWORD
+  }
+});
 
 // GET all pets
 router.get('/', (req, res) => {
@@ -24,6 +32,23 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/:id', (req,res) =>{
+    Pet.findOne({
+        where: { id: req.params.id },      
+        include: [
+        {
+            model: User,
+            attributes: ['username', 'email', 'phoneNumber']
+        },
+    ]})
+    .then((petData) => {
+        res.status(200).json(petData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+})
 
 
 
