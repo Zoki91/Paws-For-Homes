@@ -1,6 +1,7 @@
 # Paws-For-Homes
 
 ## Description
+This is the second porject of our Monash University full stack development bootcamp. The goal of this project was to build a node based full stack application which contents database for handling data, handlebars to display the HTML and could GET and POST data from and to the client side.
 
 ## User Story
 ```
