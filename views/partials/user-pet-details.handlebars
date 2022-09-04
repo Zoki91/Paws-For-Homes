@@ -3,22 +3,22 @@
     <p>Type of Pet:{{typeOfPet}}</p>
     <button class="remove-details">Delete</button>
 </section> --}}
- <div class="col-lg-6 mb-4">
-    <div class="card" style="width: 30rem;">
-        <div class="card-body-2">
-          
-            <h5 class="card-title"></i>{{name}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{typeOfPet}}</h6>
-            <p class="card-text-1">Description: {{description}}</p>
-            <p class="card-text">Location: {{location}}</p>
-            {{!-- <p class="card-text">User Name: {{user.username}}</p> --}}
-            <p class="card-text">Age: {{age}}</p>
-            {{!-- <p class="card-text">Phone Number: {{user.phoneNumber}}</p> --}}
-            {{!-- <p class="card-text">Email: {{user.email}}</p> --}}
-            <p class="card-text">Location: {{location}}</p>
-            <a href="/myaccount/edit/{{pet.id}}" class="btn btn-dark update-details">Update</a>
+<div class="col-lg-6 mb-4">
+  <div class="card-body-2">
+    <h1 class="card-title1">{{name}}</h1>
+    <h6 class="card-title-typeofpet">{{typeOfPet}}</h6>
+    <p class="card-text-description">Description: {{description}}</p>
+    <p class="card-text-age">Age: {{age}}</p>
+    <p class="card-text-location">Location: {{location}}</p>
+    <a
+      href="/myaccount/edit/{{pet.id}}"
+      class="btn btn-dark update-details"
+    >Update</a>
 
-            <button type="button" id={{id}} class="btn btn-outline-dark remove-details delete-btn">Delete</button> 
-        </div>
-    </div>
+    <button
+      type="button"
+      id={{id}}
+      class="btn btn-outline-dark remove-details delete-btn"
+    >Delete</button>
+  </div>
 </div>
