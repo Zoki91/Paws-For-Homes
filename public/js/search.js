@@ -32,7 +32,10 @@ const render = () => {
       cardText3.setAttribute("class", "card-text-gender"); // Gender of Pet
       cardText4.setAttribute("class", "card-text-description"); // Description
       cardText5.setAttribute("class", "card-text-location"); // Location
-      enquireButton.setAttribute("class","enquire-button")
+      enquireButton.setAttribute("class","enquire-button ")
+      enquireButton.setAttribute("data-bs-toggle","modal")
+      enquireButton.setAttribute("data-bs-target","#exampleModal")
+      enquireButton.setAttribute("type","button")
       enquireButton.setAttribute("id",pet.id)
 
 
@@ -98,7 +101,22 @@ async function enquireFunction (event){
       method:'GET'
     })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      const modal = document.querySelector('.modal-body');
+      modal.innerHTML ="";
+      const email = document.createElement("p");
+      const phoneNumber = document.createElement("p");
+
+
+
+
+
+      email.textContent = "Email: " + data.user.email
+      phoneNumber.textContent = "Phone Number: " + data.user.phoneNumber
+
+      modal.appendChild(email)
+      modal.appendChild(phoneNumber)
+    })
     
 
 }
