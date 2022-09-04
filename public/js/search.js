@@ -26,7 +26,7 @@ const render = () => {
       cardTitle.setAttribute("class", "card-title-typeofpet"); // Type of Pet
       cardSubtitle.setAttribute("class", "card-title1 "); // Name of Pet
       cardText1.setAttribute("class", "card-text-breed"); // Breed
-      cardText2.setAttribute("class", "card-text-age"); // Age of Pet
+      cardText2.setAttribute("class", "card-text-location"); // Age of Pet
       cardText3.setAttribute("class", "card-text-gender"); // Gender of Pet
       cardText4.setAttribute("class", "card-text-description"); // Description
       cardText5.setAttribute("class", "card-text-location"); // Location
