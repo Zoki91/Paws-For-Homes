@@ -4,25 +4,26 @@
 
 ## User Story
 ```
-AS A pets owner I ...
-I WANT a ...
-SO THAT I can ...
+AS A pets owner I want an application that can upload my pets information.
+I WANT an application to upload my pets information.
+SO THAT I can find some one to adopt or look after my pets.
 ```
 
 ## Acceptance Criteria
 ```
 GIVEN a pets adoption service site
 WHEN I visit the site for the first time
-THEN I presented with the homepage, which ...
+THEN I presented with the homepage, which a homepage icon and login button
 WHEN I click on the homepage icon
 THEN I am taken to the homepage
-WHEN I am prompted to either sign up or sign in
+WHEN I click on the login button
+THEN I am taken to the login and sign up page
 WHEN I choose to sign up
-THEN I am prompted to create a username and password
+THEN I am prompted to create an account with email, username, phone number and password
 WHEN I click on the sign-up button
 THEN my user credentials are saved and I am logged into the site
-WHEN I revisti the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
+WHEN I revisti the site at a later time and choose to log in
+THEN I am prompted to enter my email and password
 WHEN I am signed in to the site
 THEN I see navigation links for the Find a home, Find a pet, My Account and Log out
 WHEN I click on the My Account option in the navigation
@@ -31,6 +32,8 @@ WHEN I click on the Update option
 THEN I am taken to the Update pets info page with a Submit button
 WHEN I click on the Submit button
 THEN pets info updated
+WHEN I click on the Delete option
+THEN I can delete that pet info.
 WHEN I click on the Find a home option
 THEN I am prompted to enter infomation for a new pet
 WHEN I click on the Find a pet option
@@ -67,7 +70,8 @@ npm start
 
 ## Screenshots
 
+
 ## URLs
 * Github: https://github.com/Zoki91/Paws-For-Homes  
-* Deployed URL: 
+* Deployed URL: https://paws-for-homes.herokuapp.com/ 
 
